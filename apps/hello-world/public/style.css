@@ -1,0 +1,227 @@
+/* LaunchPad UI Token Imports */
+@import url('../../packages/tokens/dist/index.css');
+@import url('../../packages/tokens/dist/themes.css');
+
+/* Basic Reset */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--lp-font-family-base);
+	line-height: 1.5;
+	background-color: var(--lp-color-gray-50);
+	color: var(--lp-color-text-ui-primary-base);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Container Styles */
+.app {
+	width: 100%;
+	max-width: var(--lp-size-640);
+	padding: var(--lp-spacing-700);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--lp-spacing-700);
+}
+
+/* Card Component */
+.card {
+	width: 100%;
+	background-color: var(--lp-color-bg-ui-primary);
+	border-radius: var(--lp-border-radius-medium);
+	border: 1px solid var(--lp-color-border-ui-primary);
+	box-shadow: 0 1px 3px var(--lp-color-shadow-ui-primary);
+	padding: var(--lp-spacing-900);
+	display: flex;
+	flex-direction: column;
+	gap: var(--lp-spacing-700);
+	text-align: center;
+}
+
+/* Typography */
+h1 {
+	font: var(--lp-text-heading-1-semibold);
+	color: var(--lp-color-text-ui-primary-base);
+	margin-bottom: var(--lp-spacing-300);
+}
+
+p {
+	font: var(--lp-text-body-1-regular);
+	color: var(--lp-color-text-ui-secondary);
+	margin-bottom: var(--lp-spacing-500);
+	max-width: 35rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Button Styles */
+.button-group {
+	display: flex;
+	justify-content: center;
+	gap: var(--lp-spacing-400);
+	margin: var(--lp-spacing-300) 0;
+}
+
+.button {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	appearance: none;
+	border-radius: var(--lp-border-radius-medium);
+	border: none;
+	outline: none;
+	white-space: nowrap;
+	gap: var(--lp-spacing-200);
+	font: var(--lp-text-label-1-semibold);
+	padding: calc(5px + var(--lp-button-padding, 0px)) var(--lp-spacing-400);
+	cursor: pointer;
+	min-width: 80px;
+	z-index: 1;
+}
+
+.button:focus-visible {
+	outline: 2px solid var(--lp-color-shadow-interactive-focus);
+	outline-offset: -2px;
+	z-index: 2;
+}
+
+.button-primary {
+	--lp-button-padding: 1px;
+	background-color: var(--lp-color-blue-500);
+	color: white;
+}
+
+.button-primary:hover {
+	background-color: var(--lp-color-blue-600);
+}
+
+.button-primary:active {
+	background-color: var(--lp-color-blue-700);
+}
+
+.button-primary:focus-visible {
+	background-color: var(--lp-color-blue-600);
+	box-shadow: inset 0 0 0 3px var(--lp-color-shadow-interactive-primary);
+}
+
+.button-primary[disabled] {
+	opacity: 0.64;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+.button-secondary {
+	--lp-button-padding: 0px;
+	background-color: var(--lp-color-white-950);
+	border: 1px solid var(--lp-color-gray-200);
+	color: var(--lp-color-text-ui-primary-base);
+}
+
+.button-secondary:hover {
+	background-color: var(--lp-color-gray-50);
+}
+
+.button-secondary:active {
+	background-color: var(--lp-color-gray-100);
+}
+
+.button-secondary:focus-visible {
+	background-color: var(--lp-color-gray-50);
+}
+
+.button-secondary[disabled] {
+	opacity: 0.64;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+/* Alert Component */
+.alert {
+	width: 100%;
+	padding: var(--lp-spacing-700);
+	border-radius: var(--lp-border-radius-medium);
+	background-color: var(--lp-color-bg-feedback-success);
+	border: 1px solid var(--lp-color-border-feedback-success);
+	display: flex;
+	align-items: flex-start;
+	gap: var(--lp-spacing-300);
+	font: var(--lp-text-body-2-regular);
+	position: relative;
+}
+
+.alert svg {
+	fill: var(--lp-color-fill-feedback-success);
+	flex-shrink: 0;
+	margin-top: 2px;
+}
+
+.alert-content {
+	flex-grow: 1;
+	color: var(--lp-color-text-feedback-success);
+	font-weight: var(--lp-font-weight-medium);
+}
+
+.alert-close {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: var(--lp-size-16);
+	padding: var(--lp-spacing-200);
+	color: var(--lp-color-gray-600);
+	position: absolute;
+	right: var(--lp-spacing-300);
+	top: var(--lp-spacing-300);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 24px;
+	width: 24px;
+	border-radius: 50%;
+}
+
+.alert-close:hover {
+	background-color: var(--lp-color-gray-50);
+}
+
+/* Info Section */
+.info-section {
+	margin-top: var(--lp-spacing-700);
+	display: flex;
+	justify-content: center;
+	gap: var(--lp-spacing-900);
+}
+
+.info-item {
+	display: flex;
+	align-items: center;
+	gap: var(--lp-spacing-300);
+	font: var(--lp-text-label-1-medium);
+	color: var(--lp-color-text-ui-secondary);
+}
+
+.info-item svg {
+	fill: var(--lp-color-gray-500);
+}
+
+/* Add LaunchPad UI Footer */
+.footer {
+	font: var(--lp-text-small-1-regular);
+	color: var(--lp-color-text-ui-secondary);
+	margin-top: var(--lp-spacing-900);
+	display: flex;
+	align-items: center;
+	gap: var(--lp-spacing-300);
+}
+
+.footer-logo {
+	height: 16px;
+}

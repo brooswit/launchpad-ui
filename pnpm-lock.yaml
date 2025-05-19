@@ -156,6 +156,40 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(@types/node@22.15.3)(@vitest/ui@3.1.1)(esbuild@0.25.0)(jiti@2.4.2)(jsdom@26.1.0)(less@4.3.0)(sass@1.86.3)(stylus@0.62.0)(tsx@4.19.3)(yaml@2.7.1)
 
+  apps/hello-world:
+    dependencies:
+      '@launchpad-ui/components':
+        specifier: workspace:*
+        version: link:../../packages/components
+      '@launchpad-ui/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
+      '@launchpad-ui/tokens':
+        specifier: workspace:*
+        version: link:../../packages/tokens
+      react:
+        specifier: 19.1.0
+        version: 19.1.0
+      react-dom:
+        specifier: 19.1.0
+        version: 19.1.0(react@19.1.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.1.1
+        version: 19.1.1
+      '@types/react-dom':
+        specifier: ^19.1.2
+        version: 19.1.2(@types/react@19.1.1)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.9.0
+        version: 3.9.0(@swc/helpers@0.5.17)(rolldown-vite@6.3.6(@types/node@22.15.3)(esbuild@0.25.0)(jiti@2.4.2)(less@4.3.0)(sass@1.86.3)(stylus@0.62.0)(tsx@4.19.3)(yaml@2.7.1))
+      typescript:
+        specifier: ^5.8.2
+        version: 5.8.3
+      vite:
+        specifier: npm:rolldown-vite@6.3.6
+        version: rolldown-vite@6.3.6(@types/node@22.15.3)(esbuild@0.25.0)(jiti@2.4.2)(less@4.3.0)(sass@1.86.3)(stylus@0.62.0)(tsx@4.19.3)(yaml@2.7.1)
+
   apps/vscode:
     dependencies:
       '@launchpad-ui/tokens':
@@ -3452,14 +3486,6 @@ packages:
 
   fastq@1.19.1:
     resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
-
-  fdir@6.4.3:
-    resolution: {integrity: sha512-PMXmW2y1hDDfTSRc9gaXIuCCRpuoz3Kaz8cUelp3smouvfT632ozg2vrT6lJsHKKOF59YLbOGfAWGUcKEfRMQw==}
-    peerDependencies:
-      picomatch: ^3 || ^4
-    peerDependenciesMeta:
-      picomatch:
-        optional: true
 
   fdir@6.4.4:
     resolution: {integrity: sha512-1NZP+GK4GfuAv3PqKvxQRDMjdSRZjnkq7KfhlNrCNNlZ0ygQFpebfrnfnq/W7fpUnAv9aGWmY1zKx7FYL3gwhg==}
@@ -9211,10 +9237,6 @@ snapshots:
     dependencies:
       reusify: 1.1.0
 
-  fdir@6.4.3(picomatch@4.0.2):
-    optionalDependencies:
-      picomatch: 4.0.2
-
   fdir@6.4.4(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
@@ -11462,7 +11484,7 @@ snapshots:
 
   tinyglobby@0.2.12:
     dependencies:
-      fdir: 6.4.3(picomatch@4.0.2)
+      fdir: 6.4.4(picomatch@4.0.2)
       picomatch: 4.0.2
 
   tinyglobby@0.2.13:
