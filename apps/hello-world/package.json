@@ -8,6 +8,8 @@
 		"build": "bun build ./index.tsx --outdir=dist --target=browser"
 	},
 	"dependencies": {
+		"@launchpad-ui/alert": "^0.9.56",
+		"@launchpad-ui/button": "^0.12.55",
 		"@launchpad-ui/components": "^0.9.26",
 		"@launchpad-ui/tokens": "^0.12.5",
 		"react": "^18.2.0",
