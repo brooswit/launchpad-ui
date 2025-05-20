@@ -1,30 +1,15 @@
-# LaunchPad UI - Hello World Demo
+# hello-world4
 
-A simple hello world web application that demonstrates the LaunchPad UI component library.
-
-## Running the demo
-
-Make sure you have [pnpm](https://pnpm.io/) installed.
-
-From the root directory:
+To install dependencies:
 
 ```bash
-# Install dependencies 
-pnpm install
-
-# Build tokens first (required before starting the app)
-pnpm build:transform
-
-# Start the hello world app
-pnpm --filter hello-world dev
+bun install
 ```
 
-This will start a development server and open the demo app in your default browser.
+To run:
 
-## About LaunchPad UI
+```bash
+bun run index.ts
+```
 
-LaunchPad UI is LaunchDarkly's design system. This demo showcases some of the basic components from the library.
-
-For more information, check out:
-- [LaunchPad UI Storybook](https://launchpad.launchdarkly.com)
-- [LaunchPad UI GitHub Repository](https://github.com/launchdarkly/launchpad-ui) 
+This project was created using `bun init` in bun v1.2.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

@@ -1,25 +1,21 @@
 {
-	"name": "hello-world",
+	"name": "launchpad-button-minimal",
+	"version": "0.1.0",
 	"private": true,
-	"version": "0.0.1",
-	"description": "Hello World demo for LaunchPad UI",
+	"type": "module",
 	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
+		"dev": "bun --hot index.html",
+		"build": "bun build ./index.tsx --outdir=dist --target=browser"
 	},
 	"dependencies": {
-		"@launchpad-ui/components": "workspace:*",
-		"@launchpad-ui/icons": "workspace:*",
-		"@launchpad-ui/tokens": "workspace:*",
-		"react": "19.1.0",
-		"react-dom": "19.1.0"
+		"@launchpad-ui/components": "^0.9.26",
+		"@launchpad-ui/tokens": "^0.12.5",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"@types/react": "^19.1.1",
-		"@types/react-dom": "^19.1.2",
-		"@vitejs/plugin-react-swc": "^3.9.0",
-		"typescript": "^5.8.2",
-		"vite": "npm:rolldown-vite@6.3.6"
+		"@types/react": "^18.2.0",
+		"@types/react-dom": "^18.2.0",
+		"typescript": "^5.8.3"
 	}
 }
